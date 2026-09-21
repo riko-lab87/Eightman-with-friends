@@ -27,12 +27,34 @@
 <p style="text-align : left;" class="paragraph"> </p><br><br><br><br><br><br><br>
 <p style="text-align : center;" class="paragraph"> </p>
 <div id="sp-button-1" class="sp-part-top sp-button"><a href="#">password</a></div>
-
+  
 <div style="text-align:center;">
   <input type="password" id="password" placeholder="パスワード">
   <button onclick="checkPassword()">入る</button>
   <p id="message"></p>
 </div>
+
+<script> 
+function togglePassword() { 
+  const password = document.getElementById("password");
+
+  if (password.type === "password") {
+    password.type = "text"; 
+  } else {
+    password.type = "password"; 
+  }
+}
+
+function checkPassword() {
+  const password = document.getElementById("password").value;
+  
+  if (password === "8man") {
+    window.location.href = "gallery.html";
+  } else {
+    document.getElementById("message").textContent = "パスワードが違います。";
+  }
+}
+</script>
 <p style="text-align : center;" class="paragraph"> </p></div></article></div></div></div></div>
 <footer id="colophon" class="site-footer sp-part-top sp-footer2" role="contentinfo">
 <div id="colophon-inner" class="sp-part-top sp-footer-inner">
